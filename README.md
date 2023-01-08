@@ -8,4 +8,7 @@
 1. pindahkan .env ke folder root
 2. hidupkan xampp/laragon
 3. buat database dengan nama : surat-izin-tempat-usaha / sesuaikan dengan env
+4. jalankan php artisan migrate --seed (untuk pertama kali buat database) / php artisan migrate:fresh --seed (kedua dan seterusnya)
 4. jalankan : php artisan serve
+
+
