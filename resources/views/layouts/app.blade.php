@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Laravel</title>
+    <title>Surat Izin Tempat Usaha</title>
 
     <!-- Fonts -->
     <link href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
@@ -32,8 +32,10 @@
 
 
 
-    <div id="wrapper">
 
+
+    @if(auth()->check())
+    <div id="wrapper">
         <livewire:component.sidebar />
 
         <!-- Content Wrapper -->
@@ -66,8 +68,12 @@
 
         </div>
         <!-- End of Content Wrapper -->
-
     </div>
+    @else
+    @yield('content')
+    @endif
+
+
     <!-- End of Page Wrapper -->
 
     <!-- Scroll to Top Button-->
@@ -98,6 +104,35 @@
     @livewireScripts
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        Livewire.on('success', data => {
+            console.log(data.pesan);
+            Swal.fire({
+                position: 'top-end'
+                , title: 'success!'
+                , text: data.pesan
+                , icon: 'success',
+                // confirmButtonText: 'oke'
+                showConfirmButton: false
+                , timer: 1500
+            })
+        })
+        Livewire.on('error', data => {
+            console.log(data.pesan);
+            Swal.fire({
+                position: 'top-end'
+                , title: 'error!'
+                , text: data.pesan
+                , icon: 'error',
+                // confirmButtonText: 'oke'
+                showConfirmButton: false
+                , timer: 1500
+            })
+        })
+
+    </script>
 
 </body>
 </html>

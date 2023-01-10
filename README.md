@@ -4,11 +4,16 @@
 
 ## About Project
 
+Alat
+-nodejs
+-xampp/laragon
+-composer
 
-1. pindahkan .env ke folder root
-2. hidupkan xampp/laragon
-3. buat database dengan nama : surat-izin-tempat-usaha / sesuaikan dengan env
-4. jalankan php artisan migrate --seed (untuk pertama kali buat database) / php artisan migrate:fresh --seed (kedua dan seterusnya)
-4. jalankan : php artisan serve
+1. hidupkan xampp/laragon
+2. pindahkan .env ke folder root/project
+3. jalankan : composer install
+4. buat database dengan nama : surat-izin-tempat-usaha / sesuaikan dengan env
+5. jalankan : php artisan migrate --seed (untuk pertama kali buat database) / php artisan migrate:fresh --seed (kedua dan seterusnya)
+6. jalankan : php artisan serve
 
 
