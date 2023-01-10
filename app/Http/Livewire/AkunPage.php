@@ -18,6 +18,11 @@ class AkunPage extends Component
         return view('livewire.akun-page')->extends('layouts.app')->section('content');
     }
 
+    public function openCreate()
+    {
+        $this->createPage = true;
+    }
+
     public function resetData()
     {
         $this->nama = null;

@@ -17,3 +17,21 @@ Alat
 6. jalankan : php artisan serve
 
 
+## Akun
+administrator
+username : administrator
+password : administrator
+
+admin
+username : admin
+password : admin
+
+kepala
+username : kepala
+password : kepala
+
+umum
+username : umum
+password : umum
+
+
