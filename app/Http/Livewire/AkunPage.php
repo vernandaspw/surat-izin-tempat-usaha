@@ -7,8 +7,9 @@ use Livewire\Component;
 
 class AkunPage extends Component
 {
-    public $createPage=false, $editPage=false;
+    public $createPage = false, $editPage = false;
 
+    public $nama, $username, $password, $role, $ulangi_password;
 
     public function render()
     {
@@ -17,12 +18,33 @@ class AkunPage extends Component
         return view('livewire.akun-page')->extends('layouts.app')->section('content');
     }
 
+    public function resetData()
+    {
+        $this->nama = null;
+        $this->username = null;
+        $this->password = null;
+        $this->role = null;
+        $this->ulangi_password = null;
+    }
+
     public function create()
     {
-        $user = User::create([
-            ''
+        $this->validate([
+            'username' => ['required', 'string', 'max:20', 'unique:users', 'alpha_dash'],
         ]);
 
+        if ($this->password != $this->ulangi_password) {
+            $this->emit('error', ['pesan' => 'password & ulangi password tidak sama']);
+        } else {
+            $create = User::create([
+                'nama' => $this->nama,
+                'username' => $this->username,
+                'password' => $this->password,
+                'role' => $this->role,
+            ]);
+        }
+
+        $this->createPage = false;
         $this->emit('success', ['pesan' => 'berhasil simpam data']);
     }
 }
