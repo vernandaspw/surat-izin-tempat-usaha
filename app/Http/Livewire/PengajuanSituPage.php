@@ -61,12 +61,12 @@ class PengajuanSituPage extends Component
             'jenis_usaha_id' => $this->jenis_usaha_id,
             'jumlah_karyawan' => $this->jumlah_karyawan,
             'status_tempat' => $this->status_tempat,
-            'bukti_tempat' => $bukti_tempat != null ? $bukti_tempat : null,
-            'npwp_usaha' => $npwp_usaha != null ? $npwp_usaha : null,
-            'akta_pendirian' => $akta_pendirian != null ? $akta_pendirian : null,
-            'surat_izin_gangguan' => $surat_izin_gangguan != null ? $surat_izin_gangguan : null,
-            'sk_domisili' => $sk_domisili != null ? $sk_domisili : null,
-            'pbb' => $pbb != null ? $pbb : null,
+            'bukti_tempat' => $this->bukti_tempat != null ? $bukti_tempat : null,
+            'npwp_usaha' => $this->npwp_usaha != null ? $npwp_usaha : null,
+            'akta_pendirian' => $this->akta_pendirian != null ? $akta_pendirian : null,
+            'surat_izin_gangguan' => $this->surat_izin_gangguan != null ? $surat_izin_gangguan : null,
+            'sk_domisili' => $this->sk_domisili != null ? $sk_domisili : null,
+            'pbb' => $this->pbb != null ? $pbb : null,
         ]);
 
         redirect()->to('situ-saya');
