@@ -18,6 +18,11 @@
                         <div class="">
                             <label for="" class="m-0">Username</label>
                             <input type="text" wire:model='username' class="form-control form-control-sm" id="">
+                            @error('username')
+<div class="text-danger">
+    {{ $message }}
+</div>
+                            @enderror
                         </div>
                         <div class="">
                             <label for="" class="m-0">Password</label>
