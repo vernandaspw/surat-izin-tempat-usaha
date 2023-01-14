@@ -20,7 +20,7 @@
                                     Request Pengajuan
                                 </div>
                                 <div class="h5 mb-0 font-weight-bold text-white">
-                                    @if(auth()->user()->role == 'umun')
+                                    @if(auth()->user()->role == 'umum')
                                     {{ $request_saya }}
 
                                     @else
@@ -45,10 +45,11 @@
                                 <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                     Proses pengajuan</div>
                                 <div class="h5 mb-0 font-weight-bold text-white">
-                                    @if(auth()->user()->role == 'umun')
-                                    {{ $process }}
-                                    @else
+                                    @if(auth()->user()->role == 'umum')
                                     {{ $process_saya }}
+                                    @else
+
+                                    {{ $process }}
                                     @endif
                                 </div>
                             </div>
@@ -67,10 +68,11 @@
                                 <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                     Pending</div>
                                 <div class="h5 mb-0 font-weight-bold text-white">
-                                    @if(auth()->user()->role == 'umun')
-                                    {{ $pending }}
-                                    @else
+                                    @if(auth()->user()->role == 'umum')
                                     {{ $pending_saya }}
+
+                                    @else
+                                    {{ $pending }}
                                     @endif
                                 </div>
                             </div>
@@ -93,10 +95,11 @@
                                 <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                     Approve</div>
                                 <div class="h5 mb-0 font-weight-bold text-white">
-                                    @if(auth()->user()->role == 'umun')
-                                    {{ $approve }}
-                                    @else
+                                    @if(auth()->user()->role == 'umum')
                                     {{ $approve_saya }}
+                                    @else
+
+                                    {{ $approve }}
                                     @endif
                                 </div>
                             </div>
@@ -115,10 +118,11 @@
                                 <div class="text-xs font-weight-bold text-white text-uppercase mb-1">
                                     Reject</div>
                                 <div class="h5 mb-0 font-weight-bold text-white">
-                                    @if(auth()->user()->role == 'umun')
-                                    {{ $reject }}
-                                    @else
+                                    @if(auth()->user()->role == 'umum')
+
                                     {{ $reject_saya }}
+                                    @else
+                                    {{ $reject }}
                                     @endif
                                 </div>
                             </div>
