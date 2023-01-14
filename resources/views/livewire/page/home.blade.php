@@ -21,9 +21,10 @@
                                 </div>
                                 <div class="h5 mb-0 font-weight-bold text-white">
                                     @if(auth()->user()->role == 'umun')
-                                    {{ $request }}
-                                    @else
                                     {{ $request_saya }}
+
+                                    @else
+                                    {{ $request }}
                                     @endif
                                 </div>
                             </div>
