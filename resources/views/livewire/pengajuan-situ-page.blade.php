@@ -71,7 +71,7 @@
                     </div>
                     <div class="mb-1">
                         <label for="" class="m-0">NPWP Usaha</label>
-                        <input required wire:model='npwp_usaha' type="file" class="form-control form-control-sm">
+                        <input  wire:model='npwp_usaha' type="file" class="form-control form-control-sm">
                         @error('npwp_usaha') <span class="error">{{ $message }}</span> @enderror
                     </div>
                     <div class="mb-1">
