@@ -10,6 +10,7 @@ class AkunPage extends Component
     public $createPage = false, $editPage = false;
 
     public $nama, $username, $password, $role, $ulangi_password;
+    public $datas = [];
 
     public function render()
     {
@@ -36,7 +37,7 @@ class AkunPage extends Component
     {
         $this->validate([
             'username' => ['required', 'string', 'max:20', 'unique:users', 'alpha_dash'],
-            'ulangi_password' => 'same:password'
+            'ulangi_password' => 'same:password',
         ]);
 
         if ($this->password != $this->ulangi_password) {

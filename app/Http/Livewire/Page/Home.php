@@ -7,6 +7,7 @@ use Livewire\Component;
 
 class Home extends Component
 {
+    public $request, $process, $pending, $approve, $reject, $request_saya, $process_saya, $pending_saya, $approve_saya, $reject_saya;
     public function render()
     {
         $this->request = PengajuanSitu::where('status', 'request')->get()->count();
