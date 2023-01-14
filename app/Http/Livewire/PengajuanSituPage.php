@@ -54,7 +54,7 @@ class PengajuanSituPage extends Component
             'pemilik_id' => auth()->user()->id,
             'foto' => $foto != null ? $foto : null,
             'ktp' => $ktp != null ? $ktp : null,
-            'npwp_pemilik' => $npwp_pemilik != null ? $npwp_pemilik : null,
+            'npwp_pemilik' => $this->npwp_pemilik != null ? $npwp_pemilik : null,
 
             'nama_usaha' => $this->nama_usaha,
             'alamat_usaha' => $this->alamat_usaha,
