@@ -33,7 +33,7 @@ Route::get('register', RegisterPage::class);
 
 
 Route::middleware(['islogin'])->group(function () {
-    // Route::get('/', Home::class);
+    Route::get('/', Home::class);
 
     Route::get('profil', ProfilPage::class);
 
